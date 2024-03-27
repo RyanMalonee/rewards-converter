@@ -20,13 +20,11 @@ public class RewardValue {
         return milesValue;
     }
 
-    public void convertCash(double cash) {
-        this.cashValue = cash;
-        this.milesValue = (int) (cash / 0.0035);
+    public int convertCash(double cash) {
+        return (int) (cash / 0.0035);
     }
 
-    public void convertMiles(int miles) {
-        this.milesValue = miles;
-        this.cashValue = (miles * 0.0035);
+    public double convertMiles(int miles) {
+        return (miles * 0.0035);
     }
 }
