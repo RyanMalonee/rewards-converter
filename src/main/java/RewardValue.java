@@ -19,4 +19,14 @@ public class RewardValue {
     public int getMilesValue() {
         return milesValue;
     }
+
+    public void convertCash(double cash) {
+        this.cashValue = cash;
+        this.milesValue = (int) (cash / 0.0035);
+    }
+
+    public void convertMiles(int miles) {
+        this.milesValue = miles;
+        this.cashValue = (miles * 0.0035);
+    }
 }
